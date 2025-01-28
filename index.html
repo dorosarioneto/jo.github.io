@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Modelo CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #4CAF50; /* Verde escuro */
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Cria duas colunas/caixas que flutuam lado a lado */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* apenas para demonstração, deve ser removido */
+  background: #8BC34A; /* Verde claro */
+  padding: 20px;
+}
+
+/* Estilo da lista dentro do menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #C8E6C9; /* Verde muito claro */
+  height: 300px; /* apenas para demonstração, deve ser removido */
+}
+
+/* Limpa flutuações após as colunas */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estilo do rodapé */
+footer {
+  background-color: #2E7D32; /* Verde escuro */
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Layout responsivo - faz com que as duas colunas/caixas fiquem empilhadas em vez de lado a lado, em telas pequenas */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>João Neto</h2>
+<p>Neste exemplo estou melhorando meu conheccimento para que num futuro proximo eu possa ter meu próprio site/vlog.</p>
+<p>Redimensione a janela do navegador para ver o efeito responsivo (</p>
+
+<header>
+  <h2>Cidades</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Guaraqueçaba</a></li>
+      <li><a href="#">Chui</a></li>
+      <li><a href="#">Oiapoque</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Guaraqueçaba</h1>
+    <p> Guaraqueçaba é uma cidade no Paraná, Brasil. Foi habitada inicialmente pelos índios Carijós. Em 1545, portugueses chegaram e começaram a colonização. Durante a Guerra do Paraguai, muitos moradores se alistaram no exército brasileiro. Hoje, Guaraqueçaba é conhecida por suas belezas naturais, como o Parque Nacional do Superagui, que atrai turistas interessados em ecoturismo.</p>
+    <p>A cidade teve um papel significativo na Guerra do Paraguai, com muitos habitantes alistando-se no exército brasileiro. A construção da Estrada de Ferro Paranaguá-Curitiba também foi um marco importante para o desenvolvimento da cidade, facilitando o transporte e impulsionando a economia local</p>
+  </article>
+</section>
+
+<footer>
+  <p>Rodapé</p>
+</footer>
+
+</body>
+</html>
